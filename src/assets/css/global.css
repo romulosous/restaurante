@@ -27,3 +27,10 @@ body {
 button, input, select, textarea {
   font-family: "Poppins", sans-serif;
 }
+
+
+
+/* SVG clicado */
+.category-menu ul li.active svg path {
+  fill: black;
+}
