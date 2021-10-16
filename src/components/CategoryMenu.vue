@@ -97,4 +97,24 @@ export default {
 .category-menu ul li.active p {
   color: black;
 }
+
+/* Tablets */
+@media screen and (max-width: 767px) {
+  .category-menu {
+    width: 100%;
+    height: fit-content;
+    background: white;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    overflow: scroll;
+  }
+
+  ul li {
+    min-width: 78px;
+  }
+}
 </style>

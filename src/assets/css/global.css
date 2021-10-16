@@ -34,3 +34,19 @@ button, input, select, textarea {
 .category-menu ul li.active svg path {
   fill: black;
 }
+
+/* Small Desktops */
+
+@media screen and (max-width: 1000px){
+
+}
+
+
+
+/* Smartphones */
+@media screen and (max-width: 480px)  {
+  body {
+    background: white;
+ }
+}
+
