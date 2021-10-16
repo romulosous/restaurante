@@ -1,12 +1,17 @@
 <template>
   <div class="home">
-    <h1>Home</h1>
+    <CategoryMenu />
   </div>
 </template>
 
 <script>
+import CategoryMenu from "../components/CategoryMenu.vue";
+
 export default {
-  components: {},
+  name: "Home",
+  components: {
+    CategoryMenu,
+  },
 };
 </script>
 
