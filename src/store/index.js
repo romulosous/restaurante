@@ -5,10 +5,17 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    selectedCategory: "",
   },
   mutations: {
+    changeCategory(state, id) {
+      state.selectedCategory = id;
+    },
   },
   actions: {
+    changeCategory(context, id) {
+      context.commit("changeCategory", id);
+    },
   },
   modules: {
   },
