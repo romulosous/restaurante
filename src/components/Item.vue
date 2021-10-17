@@ -1,10 +1,14 @@
 <template>
   <div class="item">
-    <div class="item--tag" v-if="item.offer">Oferta</div>
-    <img class="item--img" src="../assets/images/0001.png" alt="" />
-    <h2 class="item--name">{{ item.name }}</h2>
-    <p class="item--description">{{ item.description }}</p>
-    <p class="item--price">{{ item.price | currency }}</p>
+    <div class="container">
+      <div class="item--tag" v-if="item.offer">Oferta</div>
+      <img class="item--img" src="../assets/images/0001.png" alt="" />
+    </div>
+    <div class="content">
+      <h2 class="item--name">{{ item.name }}</h2>
+      <p class="item--description">{{ item.description }}</p>
+      <p class="item--price">{{ item.price | currency }}</p>
+    </div>
   </div>
 </template>
 
@@ -69,5 +73,42 @@ export default {
   font-size: 18px;
   color: var(--yellow);
   margin: 8px auto;
+}
+
+/* Tablets */
+@media screen and (max-width: 767px) {
+  .item {
+    width: 100%;
+    height: fit-content;
+    border: 1px solid var(--light-grey);
+    display: flex;
+    margin: 10px 0;
+    padding: 5px 10px;
+  }
+
+  .item--img {
+    height: 60px;
+    order: 0;
+    margin: 0 0 10px 0;
+  }
+
+  .item--price {
+    text-align: right;
+    margin: 0 auto;
+  }
+
+  .item--tag {
+    position: static;
+    order: 1;
+    width: fit-content;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
 }
 </style>

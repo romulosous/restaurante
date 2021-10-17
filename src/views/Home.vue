@@ -22,4 +22,10 @@ export default {
 .home {
   display: flex;
 }
+
+@media screen and (max-width: 767px) {
+  .home {
+    flex-direction: column;
+  }
+}
 </style>

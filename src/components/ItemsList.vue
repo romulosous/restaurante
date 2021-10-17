@@ -31,4 +31,10 @@ export default {
   margin: 50px;
   display: flex;
 }
+@media screen and (max-width: 767px) {
+  .items-list {
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+}
 </style>
