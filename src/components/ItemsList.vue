@@ -18,10 +18,27 @@ export default {
       itemsList: [],
     };
   },
-  created() {
-    axios.get("http://localhost:3000/burguers").then((response) => {
-      this.itemsList = response.data;
-    });
+  created() {},
+  computed: {
+    selectedCategory: {
+      get() {
+        return this.$store.state.selectedCategory;
+      },
+    },
+  },
+  methods: {
+    getItemList() {
+      axios
+        .get(`http://localhost:3000/${this.selectedCategory}`)
+        .then((response) => {
+          this.itemsList = response.data;
+        });
+    },
+  },
+  watch: {
+    selectedCategory() {
+      this.getItemList();
+    },
   },
 };
 </script>
