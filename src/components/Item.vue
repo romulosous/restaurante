@@ -2,6 +2,7 @@
   <div class="item">
     <div class="container">
       <div class="item--tag" v-if="item.offer">Oferta</div>
+      <!-- <img class="item--img" :src="imagePath" alt="" /> -->
       <img class="item--img" src="../assets/images/0001.png" alt="" />
     </div>
     <div class="content">
@@ -23,6 +24,14 @@ export default {
     },
   },
   props: ["item"],
+  computed: {
+    selectedCategory() {
+      return this.$store.state.selectedCategory;
+    },
+    // imagePath() {
+    //   return require(`../assets/images/${this.selectedCategory}/${this.item.id}.png`);
+    // },
+  },
 };
 </script>
 
@@ -51,7 +60,7 @@ export default {
 
 .item--img {
   display: block;
-  margin: 20px auto 0px;
+  margin: auto;
   width: 100%;
 }
 
