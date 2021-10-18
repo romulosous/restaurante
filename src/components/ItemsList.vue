@@ -61,7 +61,8 @@ export default {
 @media screen and (max-width: 767px) {
   .items-list {
     flex-wrap: wrap;
-    margin: 20px;
+    margin: 0px;
+    padding: 20px;
   }
 }
 </style>
