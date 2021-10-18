@@ -56,6 +56,7 @@ export default {
 .items-list {
   margin: 50px;
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 @media screen and (max-width: 767px) {
