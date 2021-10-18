@@ -114,7 +114,7 @@ export default {
     display: flex;
     justify-content: center;
     margin: 20px;
-    overflow: scroll;
+    overflow: auto;
   }
 
   ul li {
