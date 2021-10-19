@@ -122,4 +122,28 @@ export default {
   line-height: 27px;
   color: var(--yellow);
 }
+
+@media screen and (max-width: 767px) {
+  .item {
+    flex-wrap: wrap;
+  }
+  .item--img-container {
+    order: 1;
+  }
+
+  .content {
+    order: 2;
+  }
+  .item--quantity {
+    order: 3;
+    padding: 0;
+    width: 81px;
+    justify-content: center;
+  }
+  .item--price {
+    order: 4;
+    padding: 0 20px;
+    margin: 5px 0;
+  }
+}
 </style>
