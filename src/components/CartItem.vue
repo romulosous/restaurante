@@ -1,5 +1,10 @@
 <template>
   <div class="item">
+    <div class="item--quantity">
+      <span class="buttons" @click="decreaseQuantity(item.id)">-</span>
+      <span class="number">{{ item.quantity }}</span>
+      <span class="buttons" @click="increaseQuantity(item.id)">+</span>
+    </div>
     <div class="item--img-container">
       <img class="item--img" :src="imagePath" alt="" />
     </div>
@@ -12,6 +17,8 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   name: "CartItem",
   props: {
@@ -31,6 +38,9 @@ export default {
       /* eslint-enable */
     },
   },
+  methods: {
+    ...mapActions(["increaseQuantity", "decreaseQuantity"]),
+  },
 };
 </script>
 
@@ -39,6 +49,26 @@ export default {
   display: flex;
   padding: 20px 0;
   border-bottom: 1px solid var(--light-grey);
+}
+
+.item--quantity {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+.item--quantity .number {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--yellow);
+  width: 28px;
+  text-align: center;
+}
+
+.item--quantity .buttons {
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .item--img-container {
