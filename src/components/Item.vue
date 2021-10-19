@@ -2,8 +2,7 @@
   <div class="item" @click="addToCart">
     <div class="container">
       <div class="item--tag" v-if="item.offer">Oferta</div>
-      <!-- <img class="item--img" :src="imagePath" alt="" /> -->
-      <img class="item--img" src="../assets/images/0001.png" alt="" />
+      <img class="item--img" :src="imagePath" alt="" />
     </div>
     <div class="content">
       <h2 class="item--name">{{ item.name }}</h2>
@@ -25,12 +24,11 @@ export default {
   },
   props: ["item"],
   computed: {
-    selectedCategory() {
-      return this.$store.state.selectedCategory;
+    imagePath() {
+      /* eslint-disable */
+      return require(`../assets/images/${this.item.id}.png`);
+      /* eslint-enable */
     },
-    // imagePath() {
-    //   return require(`../assets/images/${this.selectedCategory}/${this.item.id}.png`);
-    // },
   },
   methods: {
     addToCart() {

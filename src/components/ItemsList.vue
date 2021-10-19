@@ -45,7 +45,6 @@ export default {
   },
   watch: {
     selectedCategory() {
-      console.log("mudou");
       this.getItemList();
     },
   },

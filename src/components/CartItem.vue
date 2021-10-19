@@ -25,12 +25,10 @@ export default {
     },
   },
   computed: {
-    selectedCategory() {
-      return this.$store.state.selectedCategory;
-    },
     imagePath() {
-      return ``;
-      // return require(`../assets/images/${this.selectedCategory}/${this.item.id}.png`);
+      /* eslint-disable */
+      return require(`../assets/images/${this.item.id}.png`);
+      /* eslint-enable */
     },
   },
 };
