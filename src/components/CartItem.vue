@@ -1,7 +1,7 @@
 <template>
   <div class="item">
     <div class="item--img-container">
-      <img class="item--img" src="../assets/images/0001.png" alt="" />
+      <img class="item--img" :src="imagePath" alt="" />
     </div>
     <div class="content">
       <h3 class="item--name">{{ item.name }}</h3>
